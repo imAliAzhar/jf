@@ -36,7 +36,7 @@ async fn main() -> Result<()> {
             Event::Key(KeyCode::Char('j')) => model.update(message::Message::Increment),
             Event::Key(KeyCode::Char('k')) => model.update(message::Message::Decrement),
             Event::Key(KeyCode::Char('r')) => model.update(message::Message::Reset),
-            Event::Key(KeyCode::Char('q')) => model.update(message::Message::Quit),
+            Event::Key(KeyCode::Char('q')) => event_stream.close().await,
 
             _ => {}
         }
@@ -44,10 +44,6 @@ async fn main() -> Result<()> {
         terminal.draw(|f| {
             renderer.render(&model, f);
         })?;
-
-        if model.should_quit {
-            break;
-        }
     }
 
     Ok(())

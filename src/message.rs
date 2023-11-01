@@ -3,5 +3,4 @@ pub enum Message {
     Increment,
     Decrement,
     Reset,
-    Quit,
 }

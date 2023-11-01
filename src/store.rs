@@ -22,7 +22,6 @@ impl Model {
                 }
             }
             Message::Reset => self.counter = 0,
-            Message::Quit => self.should_quit = true, // You can handle cleanup and exit here
         };
     }
 }
