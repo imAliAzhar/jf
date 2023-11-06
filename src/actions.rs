@@ -1,5 +1,5 @@
 #[derive(PartialEq)]
-pub enum Message {
+pub enum Action {
     Increment,
     Decrement,
     Reset,
