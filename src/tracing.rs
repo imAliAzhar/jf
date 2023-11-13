@@ -6,7 +6,7 @@ pub fn init() -> Result<()> {
         .write(true)
         .truncate(true)
         .create(true)
-        .open("/tmp/jf/log")?;
+        .open("/tmp/jf")?;
 
     tracing_subscriber::fmt()
         .with_file(true)
