@@ -1,8 +1,7 @@
 use color_eyre::Result;
+use ratatui::prelude::CrosstermBackend;
 use std::io::Stdout;
 use tracing::debug;
-
-use ratatui::prelude::CrosstermBackend;
 
 pub struct Terminal {
     terminal: ratatui::Terminal<CrosstermBackend<Stdout>>,

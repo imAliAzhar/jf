@@ -25,10 +25,9 @@ impl State {
                 }
             }
             Action::Reset => self.counter = 0,
-        };
-    }
+            Action::SetDirs(dirs) => self.dirs = dirs,
 
-    pub fn add_dirs(&mut self, dirs: Vec<DirEntry>) {
-        self.dirs = dirs;
+            Action::Quit => {}
+        };
     }
 }
